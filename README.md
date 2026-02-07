@@ -20,7 +20,7 @@ A aplicação permite **ordenar produtos de diferentes formas**, **inverter a or
 
 ## 🚀 O que foi desenvolvido
 
-- Reimplementação da lógica utilizando **Hooks** (`useState`, `useMemo`)
+- Reimplementação de lógica utilizando **Hooks** (`useState`, `useMemo`)
 - Uso de **enum** para definir os tipos de ordenação
 - Ordenação alfabética da lista de produtos
 - Ordenação baseada no tamanho do texto

@@ -16,9 +16,14 @@ export const App: React.FC = () => {
         type="button"
         data-cy="all-button"
         onClick={() => {
-          getAll().then(array => {
-            setMyGoods(array);
-          });
+          getAll()
+            .then(array => {
+              setMyGoods(array);
+            })
+            .catch(error =>
+              // eslint-disable-next-line no-console
+              console.error('Erro ao carregar todos os goods:', error),
+            );
         }}
       >
         Load all goods
@@ -28,9 +33,14 @@ export const App: React.FC = () => {
         type="button"
         data-cy="first-five-button"
         onClick={() => {
-          get5First().then(array => {
-            setMyGoods(array);
-          });
+          get5First()
+            .then(array => {
+              setMyGoods(array);
+            })
+            .catch(error =>
+              // eslint-disable-next-line no-console
+              console.error('Erro ao carregar 5 primeiros goods:', error),
+            );
         }}
       >
         Load 5 first goods
@@ -40,9 +50,12 @@ export const App: React.FC = () => {
         type="button"
         data-cy="red-button"
         onClick={() => {
-          getRed().then(array => {
-            setMyGoods(array);
-          });
+          getRed()
+            .then(array => {
+              setMyGoods(array);
+            })
+            // eslint-disable-next-line no-console
+            .catch(error => console.error('Erro ao carregar reds:', error));
         }}
       >
         Load red goods
